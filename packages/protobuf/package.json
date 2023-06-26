@@ -1,0 +1,48 @@
+{
+  "name": "@hilite/protobuf",
+  "version": "0.1.0",
+  "description": "Protocol Buffers syntax highlighting for vscode.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abemedia/hilite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abemedia/hilite/issues"
+  },
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:proto3"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "proto3",
+        "extensions": [
+          ".proto"
+        ],
+        "aliases": [
+          "Protocol Buffers"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "proto3",
+        "scopeName": "source.proto",
+        "path": "./syntaxes/proto3.tmLanguage.json"
+      },
+      {
+        "scopeName": "markdown.codeblock.proto",
+        "path": "./syntaxes/proto3.codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
+      }
+    ]
+  }
+}
